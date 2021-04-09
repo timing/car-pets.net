@@ -22,7 +22,7 @@
 			<source src="metal-metal-steel.mp4" />
 		</video>
 		<script>
-			var ua = navigator.userAgent.strToLower();
+			var ua = navigator.userAgent.toLowerCase();
 			if( ua.indexOf('ios') >= 0 || ua.indexOf('android') >= 0 || ua.indexOf('mobile') >= 0){
 				var canvas = document.getElementById('#canvas');
 				document.getElementById('#canvas').addEventListener('touchstart', function(){
