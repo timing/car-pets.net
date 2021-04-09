@@ -22,16 +22,14 @@
 			<source src="metal-metal-steel.mp4" type="video/mp4" />
 		</video>
 		<script>
-			document.addEventListener('ready', function(){
-				var ua = navigator.userAgent.toLowerCase();
-				if( ua.indexOf('ios') >= 0 || ua.indexOf('android') >= 0 || ua.indexOf('mobile') >= 0){
-					var canvas = document.getElementById('#canvas');
-					canvas.setAttribute('controls', true);
-					document.getElementById('#canvas').addEventListener('touchend', function(){
-						canvas.play();
-					});
-				}
-			});
+			var ua = navigator.userAgent.toLowerCase();
+			if( ua.indexOf('ios') >= 0 || ua.indexOf('android') >= 0 || ua.indexOf('mobile') >= 0){
+				var canvas = document.getElementById('canvas');
+				//canvas.setAttribute('controls', true);
+				canvas.addEventListener('touchend', function(){
+					canvas.play();
+				});
+			}
 		</script>
 	</body>
 </html>
