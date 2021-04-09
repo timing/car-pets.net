@@ -25,7 +25,7 @@
 			var ua = navigator.userAgent.toLowerCase();
 			if( ua.indexOf('ios') >= 0 || ua.indexOf('android') >= 0 || ua.indexOf('mobile') >= 0){
 				var canvas = document.getElementById('canvas');
-				//canvas.setAttribute('controls', true);
+				canvas.setAttribute('controls', '');
 				canvas.addEventListener('touchend', function(){
 					canvas.play();
 				});
