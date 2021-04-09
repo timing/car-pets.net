@@ -2,24 +2,33 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-    <title>Car Pets</title>
-    <style>
-      html,body {
-       margin:0;padding:0;height:100%;background:#aabfbd;
-      }
-      #canvas {
-        height:100%;
-	margin:0 auto;
-	padding:0;
-	display:block;
-	max-width: 100%;
-	opacity:0.4;
-      }
-    </style>
-  </head>
-  <body>
-    <video id="canvas" preload loop autoplay muted playsinline>
-      <source src="metal-metal-steel.mp4" />
-    </video>
-  </body>
+		<title>Car Pets</title>
+		<style>
+		html,body {
+			margin:0;padding:0;height:100%;background:#aabfbd;
+		}
+		#canvas {
+			height:100%;
+			margin:0 auto;
+			padding:0;
+			display:block;
+			max-width: 100%;
+			opacity:0.4;
+		}
+    	</style>
+	</head>
+	<body>
+		<video id="canvas" preload loop autoplay muted playsinline>
+			<source src="metal-metal-steel.mp4" />
+		</video>
+		<script>
+			var ua = navigator.userAgent.strToLower();
+			if( ua.indexOf('ios') >= 0 || ua.indexOf('android') >= 0 || ua.indexOf('mobile') >= 0){
+				var canvas = document.getElementById('#canvas');
+				document.getElementById('#canvas').addEventListener('touchstart', function(){
+					canvas.play();
+				});
+			}
+		</script>
+	</body>
 </html>
