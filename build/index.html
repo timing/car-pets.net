@@ -6,29 +6,35 @@
 		<title>Car Pets</title>
 		<style>
 		html,body {
-			margin:0;padding:0;height:100%;background:#aabfbd;
+			margin:0;padding:0;height:100%;
 			font-family: Arial;
 			font-size: 10px;
+			letter-spacing: 0.1em;
 		}
 		body {
 			text-align: center;
 		}
-		h1 {
+		h1, h2 {
 			font-weight: normal;
 			margin-bottom: 180px;
+			font-size: 16px;
+			display: inline-block;
 		}
-		h1, a {
+		h1, h2, a {
 			padding: 10px;
 			background: rgba(0,0,0,0.1);
 			border-radius: 3px;
 		}
+		h1 b {
+			white-space: nowrap;
+		}
 		a {
-			margin: 10px;
+			margin: 5px;
 			color: black;
 			text-decoration:none;
 			font-size: 16px;
 		}
-		#canvas {
+		.canvas {
 			height:100%;
 			margin:0 auto;
 			padding:0;
@@ -36,7 +42,7 @@
 			max-width: 100%;
 			opacity:0.4;
 		}
-		#content {
+		.content {
 			height:100%;
 			margin:0 auto;
 			max-width: 100%;
@@ -47,24 +53,49 @@
 			width: 100%;
 			overflow: hidden;
 		}
-		#wrapper {
+		.wrapper {
 			height: 100%;
 			margin: 0 auto;
 			max-width: 100%;
-			display: inline-block;
 			text-align: center;
 			position: relative;
+		}
+		.buttons {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+		}
+		.buttons a {
+			color: #fed240;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
 		}
 	</style>
 	</head>
 	<body>
-		<div id="wrapper">
-			<div id="content">
-				<h1>Stream <b style="color:#fed240;">Metal Metal Steel</b> by <b style="color:#cb5b61;">Car Pets</b> on any streaming service</h1>
-				<a href="">Spotify</a><a href="">Apple Music</a><a href="">Deezer</a>
+		<div class="wrapper" style="background:#aabfbd;">
+			<div class="content">
+				<h1>Stream <b style="color:#fed240;">Metal Metal Steel</b> by <b style="color:#cb5b61;">Car Pets</b> on any streaming service!</h1>
+				<div class="buttons"><a href="">Spotify</a><a href="">Apple Music</a><a href="">Deezer</a></div>
 			</div>
-			<img id="canvas" src="metal-metal-steel.gif" />
+			<img class="canvas" src="metal-metal-steel.gif" />
 		</div>
+		<div class="wrapper" style="background:#333;color:white;height:50%;">
+			<div class="content">
+				<h2>Follow us!</h2>
+				<div class="buttons"><a href="">Instagram</a><a href="">Facebook</a><a href="">Newsletter</a></div>
+			</div>
+		</div>
+		<div class="wrapper" style="background:#66a8a8;">
+			<div class="content">
+				<h2>Check out our previous album Patio</h2>
+				<div class="buttons"><a href="">Spotify</a><a href="">Apple Music</a><a href="">Deezer</a></div>
+			</div>
+			<img class="canvas" src="patio.jpg" style="opacity:0.2;" />
+		</div>
+
 		<!--<video id="canvas" preload loop autoplay muted playsinline>
 			<source src="metal-metal-steel.mp4" type="video/mp4" />
 		</video>
