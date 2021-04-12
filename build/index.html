@@ -51,12 +51,7 @@
 			display: inline-block;
 			transition: all 300ms;
 			font-weight: bold;
-		}
-		a.rotate {
-			animation:spin 500ms linear;
-		}
-		@keyframes spin { 100% { transform: rotate(360deg); } }
-
+		}	
 		.buttons a:hover {
 			background: rgba(255,255,255,0.1);
 			box-shadow: 0 0 1px white;
@@ -159,17 +154,9 @@
 				if( !firstContent ){
 					return;
 				}
-				function rotateLink(link){
-					setTimeout(function(){
-						link.classList.add('rotate');
-					}, Math.random() * 1500);
-				}
 				window.addEventListener('scroll', function(){
 					if( window.scrollY >= (firstContent.offsetHeight / 2) - 200){
-						var links = firstContent.querySelectorAll('a');
-						for( l=0; l < links.length; l++ ){
-							rotateLink(links[l]);
-						}
+						// animate bird
 					}
 				});
 			})();
