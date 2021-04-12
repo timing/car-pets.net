@@ -106,18 +106,18 @@
 	</script>
 	</head>
 	<body>
-		<div class="wrapper" style="background:#acc3c0;">
+		<div class="wrapper" style="background:#acc3c0;" data-section="Metal Metal Steel">
 			<div class="content">
 				<h1>Stream <b style="color:#fed240;">Metal Metal Steel</b> by <b style="color:#cb5b61;">Car Pets</b> on any streaming service! <br/> <b>Release:</b> This friday April 16th.</h1>
 				<div class="buttons">
-					<a href="https://presave.io/t/metalmetalsteel">Spotify</a>
-					<a href="https://presave.io/t/metalmetalsteel">Apple Music</a>
-					<a href="https://presave.io/t/metalmetalsteel">Deezer</a>
+					<a href="https://presave.io/t/metalmetalsteel" target="_blank">Spotify</a>
+					<a href="https://presave.io/t/metalmetalsteel" target="_blank">Apple Music</a>
+					<a href="https://presave.io/t/metalmetalsteel" target="_blank">Deezer</a>
 				</div>
 			</div>
 			<img class="canvas" src="metal-metal-steel.gif" />
 		</div>
-		<div class="wrapper" style="background:#333;color:white;height:auto;padding-bottom:10px;">
+		<div class="wrapper" style="background:#333;color:white;height:auto;padding-bottom:10px;" data-section="Follow">
 			<div class="content" style="position:static;">
 				<h2>Follow Car Pets everywhere!</h2>
 				<div class="buttons" style="position:static;">
@@ -136,7 +136,7 @@
 			<img class="canvas" src="rugs-cover-site.jpg?1" style="width:100%;max-width:1080px;height:auto;" />
 		</div>
 
-		<div class="wrapper" style="background:#66a8a8;">
+		<div class="wrapper" style="background:#66a8a8;" data-section="Patio">
 			<div class="content">
 				<h2><b>Check out our 2019 album Patio</b></h2>
 				<div class="buttons">
@@ -150,6 +150,32 @@
 		</div>
 		<script>
 			(function(){
+				function sendEvent(action, category, label, value){
+					console.log(action, category, label, value);
+					gtag('event', action, {
+						'event_category': category,
+						'event_label': label,
+						'value': value
+					});
+				}
+
+				var sections = document.querySelectorAll('.wrapper[data-section]');
+
+				for( var s=0; s<sections.length; s++ ){
+					var links = sections[s].querySelectorAll('.buttons a');
+					for( var l=0; l<links.length; l++ ){
+
+						(function(){
+							var sectionName = sections[s].dataset.section,
+								link = links[l];
+
+							link.addEventListener('click', function(){
+								sendEvent('Click', sectionName, link.innerText, link.getAttribute('href'));
+							});
+						})();
+					}
+				}
+
 				var firstContent = document.querySelectorAll('.content')[0];
 				if( !firstContent ){
 					return;
