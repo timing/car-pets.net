@@ -28,7 +28,7 @@
 			-webkit-font-smoothing:antialiased;
 			-webkit-min-device-pixel-ratio:1.5;
 			font-size: 14px;
-			background: black;
+			background: #333b43;
 		}
 		body {
 			text-align: center;
@@ -59,9 +59,9 @@
 			font-weight: bold;
 		}	
 		.buttons a:hover {
-			background: rgba(255,255,255,0.1);
+			background: rgba(255,255,255,0.3);
 			box-shadow: 0 0 1px white;
-			color: #cb5b61;
+			color: white;
 		}
 		.canvas {
 			height:100%;
@@ -89,6 +89,10 @@
 			max-width: 100%;
 			text-align: center;
 			position: relative;
+		}
+		.wrapper-dark {
+			background: #333b43;
+			color: white;
 		}
 		.buttons {
 			position: absolute;
@@ -132,6 +136,18 @@
 </script>
 	</head>
 	<body>
+		<div class="wrapper wrapper-dark" data-section="Dante's View">
+			<div class="content">
+				<h1 style="color:white;"><b>May 14th:</b> Stream <b style="color:#fddb4b;">Dante's View</b> by <b style="color:#b2c8c4;">Car Pets</b> on any streaming service!</h1>
+				<div class="buttons">
+					<a href="https://presave.io" target="_blank" style="display:none;">Presave Song</a>
+					<a href="https://open.spotify.com/artist/6v5KiVDldfBB6yYuwSNOhc" target="_blank">Follow us @ Spotify</a>
+					<a href="https://open.spotify.com/playlist/6Yh3lpu0eJw9ndX8QpMtqd" target="_blank">Presave Spotify Playlist</a>
+				</div>
+			</div>
+			<img class="canvas" src="dantes-view.gif" alt="Car Pets - Dante's View Canvas" loading="lazy" />
+		</div>
+
 		<div class="wrapper" style="background:#acc3c0;" data-section="Metal Metal Steel">
 			<div class="content">
 				<h1>Stream <b style="color:#fed240;">Metal Metal Steel</b> by <b style="color:#cb5b61;">Car Pets</b> on any streaming service!</h1>
@@ -142,9 +158,9 @@
 					<a href="https://songwhip.com/car-pets/metal-metal-steel" target="_blank">Other</a>
 				</div>
 			</div>
-			<img class="canvas" src="metal-metal-steel.gif" alt="Car Pets - Metal Metal Steel Canvas" />
+			<img class="canvas" src="metal-metal-steel.gif" alt="Car Pets - Metal Metal Steel Canvas" loading="lazy" />
 		</div>
-		<div class="wrapper" style="background:#333;color:white;height:auto;padding-bottom:10px;" data-section="Follow">
+		<div class="wrapper wrapper-dark" style="height:auto;padding-bottom:10px;" data-section="Follow">
 			<div class="content" style="position:static;">
 				<h2>Follow Car Pets everywhere!</h2>
 				<div class="buttons" style="position:static;">
@@ -160,7 +176,7 @@
 			<div class="content">
 				<h2>Car Pets is Tijmen, Niek &amp; Paul</h2>
 			</div>
-			<img class="canvas" src="rugs-cover-site.jpg?1" style="width:100%;max-width:1080px;height:auto;" alt="Car Pets - Rugs Cover Art" />
+			<img class="canvas" src="rugs-cover-site.jpg?1" style="width:100%;max-width:1080px;height:auto;" alt="Car Pets - Rugs Cover Art" loading="lazy" />
 		</div>
 
 		<div class="wrapper" style="background:#66a8a8;" data-section="Patio">
@@ -173,10 +189,10 @@
 					<a href="https://www.youtube.com/playlist?list=OLAK5uy_l8IgV6wpvCPLGgG8A3LYUgZkuXj1e--4s" target="_blank">YouTube</a>
 				</div>
 			</div>
-			<img class="canvas" src="patio.jpg" alt="Car Pets - Patio Album" />
+			<img class="canvas" src="patio.jpg" alt="Car Pets - Patio Album" loading="lazy" />
 		</div>
 
-		<div class="wrapper" style="background:#333;color:white;height:auto;padding-bottom:10px;" data-section="Footer">
+		<div class="wrapper wrapper-dark" style="height:auto;padding-bottom:10px;" data-section="Footer">
 			<div class="content" style="position:static;">
 				<h2>About <b>Car Pets</b>, Indie rock from Utrecht, NL</h2>
 				<div style="max-width:600px;text-align:left;margin: 0 auto 20px auto;padding:0 20px;">
